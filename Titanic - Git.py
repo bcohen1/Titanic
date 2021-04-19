@@ -243,7 +243,7 @@ for alg in MLA:
     MLA_compare.loc[row_index, 'MLA Time'] = cv_results['fit_time'].mean()
     MLA_compare.loc[row_index, 'MLA Train Accuracy Mean'] = cv_results['train_score'].mean()
     MLA_compare.loc[row_index, 'MLA Test Accuracy Mean'] = cv_results['test_score'].mean()   
-    MLA_compare.loc[row_index, 'MLA Test Accuracy 3*STD'] = cv_results['test_score'].std()*3   #let's know the worst that can happen!
+    MLA_compare.loc[row_index, 'MLA Test Accuracy 3*STD'] = cv_results['test_score'].std()*3
 
     '''save MLA predictions'''
     alg.fit(train_df[train_df_x_bin], train_df[Target].values.ravel())
